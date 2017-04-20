@@ -11,15 +11,15 @@
 
 class Timer
 {
-  public:
-    Timer() {reset();}
-    void   start() { start_time = getTime(); }
-    void   stop()  { _time += (double)(getTime() - start_time) / 1000; }
-    void   reset() {_time = 0;}
-    double time()  {return _time;}
-  private:
-    DWORD start_time;
-    double  _time;
+public:
+	Timer() { reset(); }
+	void   start() { start_time = getTime(); }
+	void   stop() { _time += (double)(getTime() - start_time) / 1000; }
+	void   reset() { _time = 0; }
+	double time() { return _time; }
+private:
+	DWORD start_time;
+	double  _time;
 };
 
 #endif

@@ -7,11 +7,11 @@ static DWORD seed;
 
 void _randomize()
 {
-  seed = GetTickCount();
+	seed = GetTickCount();
 }
 
 unsigned _random(unsigned x)
 {
-  seed = seed * 367413989 + 174680251;
-  return (unsigned)(UInt32x32To64(x, seed) >> 32);
+	seed = seed * 367413989 + 174680251;
+	return (unsigned)(UInt32x32To64(x, seed) >> 32);
 }
